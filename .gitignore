@@ -1,0 +1,21 @@
+# User-specific config (contains personal info)
+config/profile.yaml
+
+# Generated resumes
+resume/output/
+resume/*.pdf
+!resume/output/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

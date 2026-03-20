@@ -1,0 +1,102 @@
+# =============================================================
+# LinkedIn Job Applier - Candidate Profile
+# =============================================================
+# Copy this file to profile.yaml and fill in your details.
+# Run: cp config/profile.example.yaml config/profile.yaml
+#
+# The agent reads this file to tailor resumes and fill forms.
+# Be thorough - better data = better tailored applications.
+# =============================================================
+
+# --- Personal Info ---
+name: "Jane Doe"
+current_title: "Senior Product Manager"    # Your ACTUAL title (used in resume subtitle)
+phone: "+1-555-123-4567"
+email: "jane.doe@email.com"
+location: "San Francisco, CA"
+linkedin: "https://www.linkedin.com/in/janedoe/"
+github: ""                                  # Optional, leave empty if none
+years_of_experience: 7                      # Total years of professional experience
+languages:                                  # Languages you speak (jobs requiring others are skipped)
+  - English
+
+# --- Job Application Defaults ---
+# These are used to auto-fill Easy Apply form fields
+application_defaults:
+  salary_current: 150000
+  salary_expected: 180000
+  notice_period: "2 weeks"                  # "Immediately" / "2 weeks" / "1 month" / etc.
+  requires_sponsorship: false               # true if you need visa sponsorship
+  willing_to_relocate: true
+  right_to_work: true                       # Do you have right to work (used for generic questions)
+  employment_type: "Full-time"              # "Full-time" / "Contract" / "Part-time"
+
+# --- Education ---
+education:
+  - school: "Stanford University"
+    degree: "Master of Science, Computer Science"
+    date: "September 2015 - June 2017"
+    location: "Stanford, CA"
+    details: "GPA: 3.9/4.0"                # Optional, set to null if not needed
+  - school: "UC Berkeley"
+    degree: "Bachelor of Science, Engineering"
+    date: "September 2011 - June 2015"
+    location: "Berkeley, CA"
+    details: null
+
+# --- Certifications ---
+certifications:
+  - "Certified Scrum Product Owner (CSPO) - Scrum Alliance"
+  - "AWS Solutions Architect Associate"
+
+# --- Work Experience ---
+# List roles from most recent to oldest.
+# The agent uses this to build the BASE_RESUME template.
+# Bullets here are your REAL achievements - the agent will rewrite them per JD.
+#
+# bullet_count: how many bullets the agent should generate for this role (more for recent roles)
+experience:
+  - title: "Senior Product Manager"
+    company: "TechCorp"
+    company_line: "TechCorp | B2B SaaS Platform | $50M ARR"    # One-line company description
+    dates: "January 2022 - Present"
+    location: "San Francisco, CA"
+    bullet_count: 6                          # 5-6 for recent roles
+    metrics:                                 # Your REAL metrics - agent reframes these per JD
+      - "Grew platform revenue from $30M to $50M ARR"
+      - "Scaled user base from 50K to 200K MAU"
+      - "Led team of 8 engineers and 2 designers"
+      - "Shipped 3 major features per quarter"
+      - "Reduced churn by 25% through onboarding redesign"
+      - "Conducted 100+ customer interviews"
+      - "Improved NPS from 32 to 58"
+
+  - title: "Product Manager"
+    company: "StartupXYZ"
+    company_line: "StartupXYZ | Fintech Startup | Series B"
+    dates: "March 2019 - December 2021"
+    location: "New York, NY"
+    bullet_count: 6
+    metrics:
+      - "Launched mobile app from 0-to-1, reaching 100K downloads in 6 months"
+      - "Managed $2M product budget"
+      - "Integrated 5 payment APIs"
+      - "Reduced transaction failures by 40%"
+
+  - title: "Associate Product Manager"
+    company: "BigTech Inc"
+    company_line: "BigTech Inc | Enterprise Software | $1B+ Revenue"
+    dates: "July 2017 - February 2019"
+    location: "Seattle, WA"
+    bullet_count: 2                          # 2-3 for older roles
+    metrics:
+      - "Shipped search feature used by 5M+ users"
+      - "Improved search relevance by 30%"
+
+# --- Skills (grouped by category) ---
+# These are your ACTUAL skills. The agent picks relevant ones per JD.
+skills:
+  strategy: "Product Roadmap, OKRs, RICE Framework, North Star Metrics, Go-to-Market Strategy"
+  analytics: "SQL, Amplitude, Mixpanel, Google Analytics, A/B Testing, Cohort Analysis"
+  execution: "Agile Scrum, Sprint Planning, JIRA, Cross-Functional Leadership, PRDs"
+  technical: "API Design, Python, Figma, Data Modeling, System Design"
